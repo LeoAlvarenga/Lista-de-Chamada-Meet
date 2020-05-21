@@ -9,6 +9,7 @@
         
 //     }
 
+const arrNames = [];
 
 chrome.tabs.query({active: true, currentWindow: true}, ([tab]) => {
     setInterval(ping, 1000, tab);
@@ -20,7 +21,12 @@ function ping(tab) {
         console.log(res);
         const ul = document.querySelector("#chamada");
         console.log(ul);
-        ul.appendChild(...res.map(createItem));
+        res.map(el => {
+            if(!arrNames.includes(el)){
+                arrNames.push(el);
+                ul.appendChild(createItem(el));
+            }
+        })
     });
 }
 
