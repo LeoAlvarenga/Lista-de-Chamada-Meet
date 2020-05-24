@@ -1,7 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "MeetsChamada",
-    "version": "0.1",
+    "name": "Lista de Presença Meets",
+    "description" : "Extensão para gerar uma lista de presença",
+    "version": "1.0",
     "content_scripts": [
         {
             "matches": [

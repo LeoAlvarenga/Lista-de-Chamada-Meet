@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
     <title>Gerar Chamada</title>
 </head>
+
 <body>
-    <h1>Chamada</h1>
-    <ul id="chamada"></ul>
+    <main>
+        <h1>Lista de Presença</h1>
+        <p>A lista de presença é registrada todas as vezes em que a aba Pessoas é aberta pelo usuário desta extensão.</p>
+        <div id="info" class="info">
+            Abra a lista de pessoas on-line na chamada para realizar o registro de presença.
+        </div>
+        <button id="download">Baixar CSV</button>
+    </main>
+    <!-- <h1>Chamada</h1>
+    <ul id="chamada"></ul> -->
 </body>
 <script src="popup.js"></script>
+
 </html>

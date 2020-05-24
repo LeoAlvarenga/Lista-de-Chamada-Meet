@@ -14,7 +14,7 @@ const interval = setInterval(() => {
             console.log(name.textContent);
 
             if (!list.includes(name.textContent)) {
-                localStorage.setItem("aluno"+localStorage.length, name.textContent);
+                sessionStorage.setItem("aluno"+sessionStorage.length, name.textContent);
                 list.push(name.textContent);
             }
 
@@ -39,9 +39,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 })
 
 function setList(list) {
-    for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.getItem("aluno" + i)) {
-            list.push(localStorage.getItem("aluno" + i));
+    for (let i = 0; i < sessionStorage.length; i++) {
+        if (sessionStorage.getItem("aluno" + i)) {
+            list.push(sessionStorage.getItem("aluno" + i));
         }
     }
 }
